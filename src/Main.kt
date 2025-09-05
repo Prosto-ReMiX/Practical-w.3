@@ -27,7 +27,7 @@ fun countSumOfCol(index: Int, list: () -> List<List<Int>>): Int {
 
 fun main() {
     val selectedIndex: Int = readln().toInt() - 1
-    println("сумма строки ${selectedIndex + 1} = ${countSumOfRow(selectedIndex, { initList() })}")
-    println("сумма столбца ${selectedIndex + 1} = ${countSumOfCol(selectedIndex, { initList() })}")
+    println("сумма строки ${selectedIndex + 1} = ${countSumOfRow(selectedIndex) { initList() }}")
+    println("сумма столбца ${selectedIndex + 1} = ${countSumOfCol(selectedIndex) { initList() }}")
 }
 
