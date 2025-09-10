@@ -30,6 +30,10 @@ fun countSumOfRow(index: Int, list: () -> List<List<Int>>): Int {
 //>>>>>>>>>>
 //7. Создать функцию, которая в качестве возвращаемого значения возвращает другую функцию;
 //<<<<<<<<<<
+fun initInitArray(vararg numbers: Int): () -> IntArray = { numbers }
+//>>>>>>>>>>
+//8. Заменить один из циклов на рекурсивную функцию;
+//>>>>>>>>>>
 fun countSumOfRow2(index: Int, list: () -> List<List<Int>>): Int {
     fun helper(i: Int): Int {
         val row = list()[index]
@@ -40,12 +44,6 @@ fun countSumOfRow2(index: Int, list: () -> List<List<Int>>): Int {
         }
     }
     return helper(0)
-}
-//>>>>>>>>>>
-//8. Заменить один из циклов на рекурсивную функцию;
-//>>>>>>>>>>
-fun sum(index: Int): Int {
-
 }
 //<<<<<<<<<<
 
